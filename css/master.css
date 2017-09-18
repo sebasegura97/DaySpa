@@ -11,6 +11,7 @@ h3  {
   font-weight: 50;
 }
 
+
 /*CONTAINER*/
 
 .container {
@@ -146,36 +147,51 @@ h3  {
   outline: none;
 }
 /* SECCION1 */
+@media only screen and (min-width: 520px) {
+  #logoPortada{
+    display: none;
+  }
+  .seccion1{
+    margin-right: 50px;
+    margin-top: 50px;
+    height: auto;
+    background-image: url('../images/plantaSinFondo.png ');
+    background-repeat: no-repeat;
+    background-position: right bottom;
+
+  }
+  .textoSeccion1 {
+    margin-left: 5%;
+    margin-right: 15%;
+    transition: .3s;
+  }
+  .textoSeccion1 h3{
+    font-size: 22px;
+    text-align: center;
+    width: 400px;
+
+  }
+  .textoSeccion1:hover {
+    transition: .3s;
+    transform: scale(1.1);
+  }
+  .textoSeccion1:hover .button{
+    transition: .3s;
+    color: white;
+    border: none;
+    padding: 15px;
+    background: linear-gradient(0deg, #BAA2CD 0%, #CDAEE5 80%);
+  }
+
+}
 .seccion1{
-  height: 600px;
   grid-area: seccion1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.textoSeccion1 {
-  margin-left: 5%;
-  margin-right: 15%;
-  transition: .3s;
-}
-.textoSeccion1 h3{
-  font-size: 22px;
-  text-align: center;
-  width: 400px;
 
-}
-.textoSeccion1:hover {
-  transition: .3s;
-  transform: scale(1.1);
-}
-.textoSeccion1:hover .button{
-  transition: .3s;
-  color: white;
-  border: none;
-  padding: 15px;
-  background: linear-gradient(0deg, #BAA2CD 0%, #CDAEE5 80%);
-}
 
 .planta{
   align-self: flex-end;
@@ -188,13 +204,32 @@ h3  {
 
 }
 @media only screen and (max-width: 520px){
+  #button1{
+    margin-right: 1px;
+  }
+
+  #button2{
+    margin-left: 1px;
+  }
+  .textoSeccion1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .textoSeccion1 h3 {
+    display:none;
+  }
+  .textoSeccion1 img {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .seccion1 {
     height: 300px;
-    background-image:url('../images/plantaSinFondo@2x.png');
+    /*background-image:url('../images/plantaSinFondo@2x.png');
     background-repeat: no-repeat;
     background-size: 80px;
-    background-position: left bottom;
-
+    background-position: left bottom;*/
   }
   .mujer {
     display: none;
@@ -308,7 +343,29 @@ h3  {
   margin-right: 15px;
 }
 
+@media only screen and (max-width: 520px) {
+  #fotoProductos{
+    display: none;
+  }
+  .seccionProductos{
+    height: 300px;
+    display: block;
+  }
+  .textoProductos{
+    display: block;
+    margin: 20px;
+  }
+  .textoProductos h3{
+    text-align: center;
+  }
+  .listItems{
+    margin: 10px;
+  }
+
+}
+
 /*CONTACTO*/
+
 .backgroundContacto{
   background-image: url("../images/tinified/contacto.png");
   background-repeat: no-repeat;
@@ -387,6 +444,9 @@ input.formInput{
   font-size: 16px;
   padding-left: 15px
 }
+
+
+
 /*MAPA*/
 
 .contacto{
@@ -398,7 +458,47 @@ input.formInput{
   width: 500px;
   height: 600px;
   margin: auto;
+  border: 2px #8FC951 solid;
+  border-radius: 15px;
+  z-index: 2;
 }
+
+@media only screen and (max-width: 520px){
+  input.formInput{
+    width: 200px;
+    margin-left: 0;
+  }
+
+  .Nombre{
+    margin-left: 0px;
+  }
+  .contactoResponsive{
+    flex-direction: column;
+  }
+  .contactoInfo{
+    margin: 0;
+  }
+  .contactoInfo h4{
+    text-align: center;
+  }
+  #myMap{
+    width: 250px;
+    height: 300px;
+  }
+  .redItem{
+    width: 150px;
+    margin-top: 10px;
+  }
+  .redesContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}
+
+
+
 
 /*FOOTER*/
 footer{
@@ -434,4 +534,28 @@ footer{
 }
 .footerContacto1{
   margin-right: 20px;
+}
+@media only screen and (max-width: 520px) {
+  .footerContainer{
+      flex-direction: column;
+  }
+  .footerContacto{
+    margin-top: 10px;
+  }
+  .footerContacto a{
+    flex-direction: column;
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+  .footerContactoItem{
+    padding: 5px;
+  }
+  .footerContacto a img{
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  #logoFooter{
+    margin-bottom: 10px;
+  }
+
 }
